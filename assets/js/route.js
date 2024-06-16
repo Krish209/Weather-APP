@@ -1,10 +1,3 @@
-/**
- * @license MIT
- * @fileoverview All module functions
- * @copyright 2024 All rights reserved
- * @author Me
- */
-
 'use strict';
 
 import { updateWeather, error404 } from "./app.js";
