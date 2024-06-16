@@ -1,10 +1,3 @@
-/**
- * @license MIT
- * @fileoverview All api related stuff like api_key, api request etc.
- * @copyright 2024 All rights reserved
- * @author Me
- */
-
 'use strict';
 
 const api_key = "0dae487bdc5bcb678d65b27f1d423e0d";
