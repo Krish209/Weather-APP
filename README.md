@@ -70,5 +70,6 @@ weather-app/
 │   ├── app.js
 │   ├── module.js
 |   ├── route.js
+├── favicon.svg
 ├── index.html
 └── README.md
