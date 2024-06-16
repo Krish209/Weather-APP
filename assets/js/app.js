@@ -1,9 +1,3 @@
-/**
- * @license MIT
- * @copyright 2024 All rights reserved
- * @author Me
- */
-
 'use strict';
 
 import { fetchData, url } from "./api.js";
