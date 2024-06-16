@@ -5,6 +5,13 @@
 
 This Weather Web Application allows users to view the current weather and air quality index (AQI) for any location worldwide. The application provides detailed information on temperature, humidity, pressure, visibility, and sunrise/sunset times. Users can search for locations and view the weather data in an intuitive and user-friendly interface.
 
+![image](https://github.com/Krish209/Weather-APP/assets/76595963/5f208c91-5cfc-4075-a4c6-2c63febf264c)
+
+![image](https://github.com/Krish209/Weather-APP/assets/76595963/3c288fdc-acf1-464e-ba25-762722530c4c)
+
+![image](https://github.com/Krish209/Weather-APP/assets/76595963/576e55d0-9c3d-436f-950e-3e659bde7992)
+
+
 ## Features
 
 - **Current Weather**: Displays the current temperature, weather conditions, and other relevant details for the selected location.
@@ -26,25 +33,19 @@ This Weather Web Application allows users to view the current weather and air qu
 
 1. **Clone the repository**:
     ```bash
-    git clone https://github.com/yourusername/weather-app.git
+    git clone https://github.com/Krish209/weather-app.git
     ```
 
 2.  **Open with VSCode**:
 
-```bash
-  code .
-```
+    ```bash
+      code .
+    ```
 
-3.  **Open with live server**:
-   
-```bash
-  npm run start
-```
-
-4. **Install Dependencies**:
+3. **Install Dependencies**:
     Ensure you have a local server setup (e.g., using VSCode Live Server, XAMPP, etc.) to serve the application files.
 
-5. **API Configuration**:
+4. **API Configuration**:
     - Obtain API keys from the weather service provider and reverse geocoding service.
     - Update the `api.js` file with your API keys:
         ```javascript
@@ -52,7 +53,7 @@ This Weather Web Application allows users to view the current weather and air qu
         const geo_api_key = "YOUR_GEO_API_KEY";
         ```
 
-6. **Run the Application**:
+5. **Run the Application**:
     - Start your local server and navigate to the application URL (e.g., `http://localhost/weather-app`).
 
 ## Project Structure
@@ -68,5 +69,6 @@ weather-app/
 │   ├── api.js
 │   ├── app.js
 │   ├── module.js
+|   ├── route.js
 ├── index.html
 └── README.md
