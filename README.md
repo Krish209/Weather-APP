@@ -43,7 +43,7 @@ This Weather Web Application allows users to view the current weather and air qu
     ```
 
 3. **Install Dependencies**:
-    Ensure you have a local server setup (e.g., using VSCode Live Server, XAMPP, etc.) to serve the application files.
+    - Ensure you have a local server setup (e.g., using VSCode Live Server, XAMPP, etc.) to serve the application files.
 
 4. **API Configuration**:
     - Obtain API keys from the weather service provider and reverse geocoding service.
