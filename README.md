@@ -5,11 +5,14 @@
 
 This Weather Web Application allows users to view the current weather and air quality index (AQI) for any location worldwide. The application provides detailed information on temperature, humidity, pressure, visibility, and sunrise/sunset times. Users can search for locations and view the weather data in an intuitive and user-friendly interface.
 
-![image](https://github.com/Krish209/Weather-APP/assets/76595963/5f208c91-5cfc-4075-a4c6-2c63febf264c)
+![image](https://github.com/Krish209/Weather-APP/assets/76595963/802b8bcc-c761-4545-a655-4d78724d4a79)
 
-![image](https://github.com/Krish209/Weather-APP/assets/76595963/3c288fdc-acf1-464e-ba25-762722530c4c)
+![image](https://github.com/Krish209/Weather-APP/assets/76595963/8884209a-5f1d-426f-b5ae-91d490fd290c)
 
-![image](https://github.com/Krish209/Weather-APP/assets/76595963/576e55d0-9c3d-436f-950e-3e659bde7992)
+![image](https://github.com/Krish209/Weather-APP/assets/76595963/819f501c-e961-428d-8da6-fa44a1a5bca7)
+
+![image](https://github.com/Krish209/Weather-APP/assets/76595963/9d5c995a-1167-4a50-802a-239969afb867)
+
 
 
 ## Features
