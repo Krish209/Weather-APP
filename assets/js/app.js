@@ -9,6 +9,7 @@ import * as module from "./module.js";
  * @param {String} eventType Event Type e.g.: "click", "mouseover"
  * @param {Function} callback Callback function
  */
+
 const addEventOnElements = function(elements, eventType, callback){
     for (const element of elements) element.addEventListener(eventType, callback);
 }
@@ -125,7 +126,7 @@ export const updateWeather = function (lat, lon){
         const{
             weather,
             dt: dateUnix,
-            sys: { sunrise: sunriseUnixUTC, sunset: sunsetUnixUTC},
+            sys: { sunrise: sunriseUnixUTC, sunset: sunsetUnixUTC },
             main: { temp, feels_like, pressure, humidity },
             visibility,
             timezone
@@ -138,7 +139,7 @@ export const updateWeather = function (lat, lon){
         card.innerHTML = `
             <h2 class="title-2 card-title">Now</h2>
 
-            <div class="wrapper">
+            <div class="weapper">
                 <p class="heading">${parseInt(temp)}&deg;<sup>c</sup></p>
 
                 <img src="./assets/images/weather_icons/${icon}.png" width="64" height="64" alt="${description}"
@@ -151,13 +152,11 @@ export const updateWeather = function (lat, lon){
 
                 <li class="meta-item">
                     <span class="m-icon">calendar_today</span>
-
                     <p class="title-3 meta-text">${module.getDate(dateUnix, timezone)}</p>
                 </li>
 
                 <li class="meta-item">
                     <span class="m-icon">location_on</span>
-
                     <p class="title-3 meta-text" data-location></p>
                 </li>
                 
@@ -165,7 +164,7 @@ export const updateWeather = function (lat, lon){
         `;
 
         fetchData(url.reverseGeo(lat, lon), function ([{ name, country }]){
-            card.querySelector("[data-location]").innerHTML = `${name}, ${country}`;
+            card.querySelector("[data-location]").innerHTML = `${name}, ${country}`
         });
 
         currentWeatherSection.appendChild(card);
@@ -181,7 +180,7 @@ export const updateWeather = function (lat, lon){
         }] = airPollution.list;
 
         const card = document.createElement("div");
-        card. classList.add("card", "card-lg");
+        card.classList.add("card", "card-lg");
 
         card.innerHTML = `
             <h2 class="title-2" id="highlights-label">Todays Highlights</h2>
@@ -244,7 +243,7 @@ export const updateWeather = function (lat, lon){
                             <div>
                                 <p class="label-1">Sunrise</p>
 
-                                <p class="title-4">${module.getTime(sunriseUnixUTC, timezone)}</p>
+                                <p class="title-1">${module.getTime(sunriseUnixUTC, timezone)}</p>
                             </div>
                         </div>
 
@@ -254,7 +253,7 @@ export const updateWeather = function (lat, lon){
                             <div>
                                 <p class="label-1">Sunset</p>
 
-                                <p class="title-4">${module.getTime(sunsetUnixUTC, timezone)}</p>
+                                <p class="title-1">${module.getTime(sunsetUnixUTC, timezone)}</p>
                             </div>
                         </div>
 
@@ -275,39 +274,31 @@ export const updateWeather = function (lat, lon){
                 </div>
 
                 <div class="card card-sm highlight-card">
-
                     <h3 class="title-3">Pressure</h3>
 
                     <div class="wrapper">
                         <span class="m-icon">airwave</span>
-
                         <p class="title-1">${pressure}<sub>hPa</sub></p>
                     </div>
                     
                 </div>
 
                 <div class="card card-sm highlight-card">
-
                     <h3 class="title-3">Visibility</h3>
 
                     <div class="wrapper">
                         <span class="m-icon">visibility</span>
-
                         <p class="title-1">${visibility / 1000}<sub>km</sub></p>
-                    </div>
-                    
+                    </div>                
                 </div>
 
                 <div class="card card-sm highlight-card">
-
                     <h3 class="title-3">Feels Like</h3>
 
                     <div class="wrapper">
                         <span class="m-icon">thermostat</span>
-
                         <p class="title-1">${parseInt(feels_like)}&deg;<sup>c</sup></p>
-                    </div>
-                    
+                    </div>               
                 </div>
 
             </div>
@@ -320,11 +311,12 @@ export const updateWeather = function (lat, lon){
        /**
          * 24th Forecast Section
         */ 
+
        fetchData(url.forecast(lat, lon), function (forecast){
 
         const {
             list: forecastList,
-            components: { timezone }
+            city: { timezone }
         } = forecast;
 
         hourlySection.innerHTML = `
@@ -332,7 +324,6 @@ export const updateWeather = function (lat, lon){
 
             <div class="slider-container">
                 <ul class="slider-list" data-temp></ul>
-
                 <ul class="slider-list" data-wind></ul>
             </div>
         `;
@@ -386,18 +377,18 @@ export const updateWeather = function (lat, lon){
         }
 
         /**
-         * 5 Day Forecast Section
-        */ 
-       forecastSection.innerHTML = `
+         * 5 Day Forecast section
+         */
+
+        forecastSection.innerHTML = `
             <h2 class="title-2" id="forecast-label">5 Days Forecast</h2>
 
-                <div class="card card-lg forecast-card">
-                    <ul data-forecast-list></ul>
-                </div>
+            <div class="card card-lg forecast-card">
+                <ul data-forecast-list></ul>
+            </div>
         `;
 
-        for (let i = 7, len = forecastList.length; i < len; i += 8){
-            
+        for(let i=7, len=forecastList.length; i<len; i+=8) {
             const {
                 main: { temp_max },
                 weather,
@@ -411,30 +402,28 @@ export const updateWeather = function (lat, lon){
 
             li.innerHTML = `
                 <div class="icon-wrapper">
-                    <img src="./assets/images/weather_icons/${icon}.png" width="36" height="36" alt="${description}" 
-                        class="weather-icon" title="${description}">
+
+                    <img src="./assets/images/weather_icons/${icon}.png" width="36" height="36" alt="${description}" class="weather-icon" title="${description}">
 
                     <span class="span">
                         <p class="title-2">${parseInt(temp_max)}&deg;</p>
                     </span>
                 </div>
 
-                <p class="label-1">${date.getDate()} ${module.monthNames[date.getMonth()]}</p>
-
+                <p class="label-1">${date.getDate()} ${module.monthNames[date.getUTCMonth()]}</p>
                 <p class="label-1">${module.weekDayNames[date.getUTCDay()]}</p>
             `;
             forecastSection.querySelector("[data-forecast-list]").appendChild(li);
-
         }
 
         loading.style.display = "none";
         container.style.overflowY = "overlay";
         container.classList.add("fade-in");
 
-    }); 
+        });
 
-});  
-
+    });
 }
 
-export const error404 = () => errorContent.style.display = 'flex';
+export const error404 = () => errorContent.style.display = "flex";
+
