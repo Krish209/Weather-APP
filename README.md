@@ -3,7 +3,7 @@
 
 ## Overview
 
-This Weather Web Application allows users to view the current weather and air quality index (AQI) for any location worldwide. The application provides detailed information on temperature, humidity, pressure, visibility, and sunrise/sunset times. Users can search for locations and view the weather data in an intuitive and user-friendly interface.
+This Weather Web Application allows users to view the current weather and air quality index (AQI) for any location worldwide. The application provides detailed information on hourly forecasts and 7-day forecasts. Further, it provides temperature, humidity, pressure, visibility, and sunrise/sunset times. Users can search for locations and view the weather data in an intuitive and user-friendly interface.
 
 ![image](https://github.com/Krish209/Weather-APP/assets/76595963/802b8bcc-c761-4545-a655-4d78724d4a79)
 
@@ -19,6 +19,8 @@ This Weather Web Application allows users to view the current weather and air qu
 
 - **Current Weather**: Displays the current temperature, weather conditions, and other relevant details for the selected location.
 - **Air Quality Index (AQI)**: Displays AQI data and pollutant levels for the selected location.
+- **Hourly Forecast**: Provides a forecast for the next 24 hours with details on temperature, weather conditions, and wind speed.
+- **5-Day Forecast**: Shows a 5-day weather forecast with daily temperature highs and conditions.
 - **Sunrise & Sunset Times**: Shows the sunrise and sunset times for the current day.
 - **Moonrise & Moonset Times**: Shows the moonrise and moonset times for the current day.
 - **Search Functionality**: Allows users to search for any location worldwide and view its weather data.
